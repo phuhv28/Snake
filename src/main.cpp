@@ -22,7 +22,7 @@ const SDL_Color GREEN_COLOR = {0, 128, 0};
 
 const SDL_Color DEFAULT_COLOR = BLACK_COLOR;
 
-const double STEP_DELAY = 0.5;
+const double STEP_DELAY = 0.1;
 
 typedef std::chrono::duration<double> ElapsedTime;
 
@@ -175,11 +175,19 @@ UserInput interpretEvent(SDL_Event e)
         {
         case SDLK_UP:
             return KEY_UP;
+        case SDLK_w:
+            return KEY_UP;
         case SDLK_DOWN:
+            return KEY_DOWN;
+        case SDLK_s:
             return KEY_DOWN;
         case SDLK_LEFT:
             return KEY_LEFT;
+        case SDLK_a:
+            return KEY_LEFT;
         case SDLK_RIGHT:
+            return KEY_RIGHT;
+        case SDLK_d:
             return KEY_RIGHT;
         }
     }
